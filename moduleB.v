@@ -7,13 +7,15 @@ module moduleB (
     b_extra_out
 );
 
-    localparam IN_TO_A_WIDTH   = `B_TO_A_WIDTH;
-    localparam FROM_A_WIDTH    = `A_TO_B_WIDTH;
-    localparam B_EXTRA_WIDTH_LP = `B_EXTRA_WIDTH;
+    // Port width localparams follow the convention PORTNAME_BITWIDTH
+    localparam DATA_FROM_B_BITWIDTH = `DATA_FROM_B_BITWIDTH;
+    localparam DATA_TO_B_BITWIDTH   = `DATA_TO_B_BITWIDTH;
+    localparam B_EXTRA_IN_BITWIDTH  = `B_EXTRA_IN_BITWIDTH;
+    localparam B_EXTRA_OUT_BITWIDTH = `B_EXTRA_OUT_BITWIDTH;
 
-    output [IN_TO_A_WIDTH-1:0] data_from_B;
-    input  [FROM_A_WIDTH-1:0] data_to_B;
-    input  [B_EXTRA_WIDTH_LP-1:0] b_extra_in;
-    output [B_EXTRA_WIDTH_LP-1:0] b_extra_out;
+    output [DATA_FROM_B_BITWIDTH-1:0] data_from_B;
+    input  [DATA_TO_B_BITWIDTH-1:0]   data_to_B;
+    input  [B_EXTRA_IN_BITWIDTH-1:0]  b_extra_in;
+    output [B_EXTRA_OUT_BITWIDTH-1:0] b_extra_out;
 
 endmodule
