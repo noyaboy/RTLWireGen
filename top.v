@@ -23,16 +23,16 @@ module top (
     wire [A_TO_B_BITWIDTH-1:0] a_to_b;
     wire [B_TO_A_BITWIDTH-1:0] b_to_a;
 
-    moduleA u_moduleA (
-        .data_from_B (b_to_a),
+    module_a u_module_a (
+        .data_from_b (b_to_a),
         .a_extra_in  (a_extra_in),
-        .data_to_B   (a_to_b),
+        .data_to_b   (a_to_b),
         .a_extra_out (a_extra_out)
     );
 
-    moduleB u_moduleB (
-        .data_from_B (b_to_a),
-        .data_to_B   (a_to_b),
+    module_b u_module_b (
+        .data_to_a (b_to_a),
+        .data_from_a   (a_to_b),
         .b_extra_in  (b_extra_in),
         .b_extra_out (b_extra_out)
     );

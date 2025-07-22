@@ -1,9 +1,9 @@
 `include "config.vh"
 
-module moduleA (
-    data_from_B,
+module module_a (
+    data_from_b,
     a_extra_in,
-    data_to_B,
+    data_to_b,
     a_extra_out
 );
 
@@ -13,9 +13,9 @@ module moduleA (
     localparam DATA_TO_B_BITWIDTH   = `DATA_TO_B_BITWIDTH;
     localparam A_EXTRA_OUT_BITWIDTH = `A_EXTRA_OUT_BITWIDTH;
 
-    input  [DATA_FROM_B_BITWIDTH-1:0] data_from_B;
+    input  [DATA_FROM_B_BITWIDTH-1:0] data_from_b;
     input  [A_EXTRA_IN_BITWIDTH-1:0]  a_extra_in;
-    output [DATA_TO_B_BITWIDTH-1:0]   data_to_B;
+    output [DATA_TO_B_BITWIDTH-1:0]   data_to_b;
     output [A_EXTRA_OUT_BITWIDTH-1:0] a_extra_out;
 
 endmodule
