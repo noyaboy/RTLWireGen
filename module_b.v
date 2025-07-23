@@ -18,4 +18,5 @@ module module_b (
     input  [B_EXTRA_IN_BITWIDTH-1:0]  b_extra_in;
     output [B_EXTRA_OUT_BITWIDTH-1:0] b_extra_out;
 
+endmodule
 
