@@ -1,0 +1,12 @@
+{'module_a': {'defines': {'A_EXTRA_IN_BITWIDTH': 4,
+                          'A_EXTRA_OUT_BITWIDTH': 4,
+                          'DATA_FROM_B_BITWIDTH': 'B_TO_A_BITWIDTH',
+                          'DATA_TO_B_BITWIDTH': 'A_TO_B_BITWIDTH'},
+              'submodules': []},
+ 'module_b': {'defines': {'B_EXTRA_IN_BITWIDTH': 12,
+                          'B_EXTRA_OUT_BITWIDTH': 12,
+                          'DATA_FROM_A_BITWIDTH': 'A_TO_B_BITWIDTH',
+                          'DATA_TO_A_BITWIDTH': 'B_TO_A_BITWIDTH'},
+              'submodules': []},
+ 'top': {'defines': {'A_TO_B_BITWIDTH': 8, 'B_TO_A_BITWIDTH': 16},
+         'submodules': ['module_a', 'module_b']}}
